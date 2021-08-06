@@ -1,7 +1,7 @@
 # OOP Concepts in Java
 This repository has some java programs. They were taken at my graduation and during the Course Video Course (https://www.cursoemvideo.com/course/java-poo/aulas/java-poo/modulos/exemplo-pratico-em-java/). Each package represents an exercise requested by the teacher. Below I will explain the programs present in each one of them.
  
-## First Program (package - firstprogram)
+## Project: FirstProgram
 ### Pen (Class - Pen)
 This class models a basic pen. The object has some attributes:
 * model (String)
@@ -15,7 +15,7 @@ The program has Getters and Setters, the method toWrite() (it shows if you can w
 ### Pen Manager (Class - PenManager)
 It contains only the main method. He instantiates two different pens and uses their methods.
 
-## Bank (package - bank)
+## Project: SwingInterfaceBank
 ### Checking Account (Class - CheckingAccount)
 It models a checking account. The class has attributes to identify the bank account: 
 * Bank code (String)
