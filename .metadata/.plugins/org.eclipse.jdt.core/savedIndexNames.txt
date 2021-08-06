@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+C:\ENGENHARIA DA COMPUTAÇÃO\POO_JAVA\.metadata\.plugins\org.eclipse.jdt.core
+3048885576.index
+384558603.index
+187532049.index
+2167003088.index
+4058775613.index
+496513937.index

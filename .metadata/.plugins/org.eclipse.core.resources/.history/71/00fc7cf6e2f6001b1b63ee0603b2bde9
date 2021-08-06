@@ -1,0 +1,5 @@
+package interfacebank;
+
+public class CheckingAccount {
+
+}

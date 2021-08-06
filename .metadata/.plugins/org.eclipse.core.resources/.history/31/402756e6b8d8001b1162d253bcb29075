@@ -1,0 +1,195 @@
+package compound_Objects;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.util.Random;
+import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+
+import java.awt.Font;
+
+public class Interface {
+
+	private JFrame frame;
+	
+	public float randomFloat(float min, float max) {
+		Random rand = new Random();
+		return rand.nextFloat() * (max-min) + min;
+	}
+
+	public float randomInt(int min, int max) {
+		Random rand = new Random();
+		return rand.nextInt() * (max-min) + min;
+	}
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Interface window = new Interface();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Interface() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 654, 477);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		//Instation a octagon
+		Octagon octagon = new Octagon(200);
+				
+		//Instatiation fight
+		Fighter[] fighter = new Fighter[24];
+				
+		fighter[0] = new Fighter("Astonished_Face", randomFloat(1.6F,1.8F) , randomFloat(45F,61.5F), true);
+		fighter[1] = new Fighter("Beaming_Face_With_Smiling_Eyes", randomFloat(1.6F,1.8F) , randomFloat(45F,61.5F), false);		
+		fighter[2] = new Fighter("Exploding_Head", randomFloat(1.6F,1.8F) , randomFloat(45F,61.5F), false);		
+		fighter[3] = new Fighter("Face_Blowing_a_Kiss", randomFloat(1.6F,1.8F) , randomFloat(45F,61.5F), false);		
+		fighter[4] = new Fighter("Face_With_Tears_of_Joy", randomFloat(1.6F,1.8F) , randomFloat(45F,61.5F), false);	
+		fighter[5] = new Fighter("Face_With_Tongue", randomFloat(1.6F,1.8F) , randomFloat(45F,61.5F), false);
+			
+		fighter[6] = new Fighter("Flushed_Face", randomFloat(1.6F,1.9F) , randomFloat(61.6F,77.1F), true);	 
+		fighter[7] = new Fighter("Frowning_Face", randomFloat(1.6F,1.9F) , randomFloat(61.6F,77.1F), false);		
+		fighter[8] = new Fighter("Grinning_Face_With_Smiling_Eyes", randomFloat(1.6F,1.9F) , randomFloat(61.6F,77.1F), false);		
+		fighter[9] = new Fighter("Grinning_Face_With_Sweat", randomFloat(1.6F,1.9F) , randomFloat(61.6F,77.1F), false);		
+		fighter[10] = new Fighter("Grinning_Squinting_Face", randomFloat(1.6F,1.9F) , randomFloat(61.6F,77.1F), false);		
+		fighter[11] = new Fighter("Hugging_Face", randomFloat(1.6F,1.9F) , randomFloat(61.6F,77.1F), false);
+				
+		fighter[12] = new Fighter("Kissing_Face_With_Closed_Eyes", randomFloat(1.7F,2.0F) , randomFloat(61.6F,92.9F), true);	
+		fighter[13] = new Fighter("Nauseated_Face", randomFloat(1.7F,2.0F) , randomFloat(61.6F,92.9F), false);		
+		fighter[14] = new Fighter("Persevering_Face", randomFloat(1.7F,2.0F) , randomFloat(61.6F,92.9F), false);		
+		fighter[15] = new Fighter("Sleepy_Face", randomFloat(1.7F,2.0F) , randomFloat(61.6F,92.9F), false);		
+		fighter[16] = new Fighter("Slightly_Smiling_Face", randomFloat(1.7F,2.0F) , randomFloat(61.6F,92.9F), false);		
+		fighter[17] = new Fighter("Tired_Face", randomFloat(1.7F,2.0F) , randomFloat(61.6F,92.9F), false);
+				
+		fighter[18] = new Fighter("Upside_Down_Face", randomFloat(1.75F,2.1F) , randomFloat(61.6F,130F), true);		
+		fighter[19] = new Fighter("Weary_Face", randomFloat(1.75F,2.1F) , randomFloat(61.6F,130F), false);		
+		fighter[20] = new Fighter("Winking_Face", randomFloat(1.75F,2.1F) , randomFloat(61.6F,130F), false);		
+		fighter[21] = new Fighter("Worried_Face", randomFloat(1.75F,2.1F) , randomFloat(61.6F,130F), false);		
+		fighter[22] = new Fighter("Zany_Face", randomFloat(1.75F,2.1F) , randomFloat(61.6F,130F), false);		
+		fighter[23] = new Fighter("Zipper_Mouth_Face", randomFloat(1.75F,2.1F) , randomFloat(61.6F,130F), false);
+			
+		//Icons
+		ImageIcon crown = new ImageIcon("Emoji\\Crown.jpg");
+		crown.setImage(crown.getImage().getScaledInstance(30, 36, 30));
+		ImageIcon versus = new ImageIcon("Emoji\\_VS.jpg");
+		versus.setImage(versus.getImage().getScaledInstance(140, 140, 140));		
+		ImageIcon Astonished_Face = new ImageIcon("Emoji\\Astonished_Face.jpg");
+		Astonished_Face.setImage(Astonished_Face.getImage().getScaledInstance(140, 140, 140));		
+		ImageIcon Beaming_Face_With_Smiling_Eyes = new ImageIcon("Emoji\\Beaming_Face_With_Smiling_Eyes.jpg");
+		Beaming_Face_With_Smiling_Eyes.setImage(Beaming_Face_With_Smiling_Eyes.getImage().getScaledInstance(140, 140, 140));		
+		ImageIcon Exploding_Head = new ImageIcon("Emoji\\Exploding_Head.jpg");
+		Exploding_Head.setImage(Exploding_Head.getImage().getScaledInstance(140, 140, 140));		
+		ImageIcon Face_Blowing_a_Kiss = new ImageIcon("Emoji\\Face_Blowing_a_Kiss.jpg");
+		Face_Blowing_a_Kiss.setImage(Face_Blowing_a_Kiss.getImage().getScaledInstance(140, 140, 140));		
+		ImageIcon Face_With_Tears_of_Joy = new ImageIcon("Emoji\\Face_With_Tears_of_Joy.jpg");
+		Face_With_Tears_of_Joy.setImage(Face_With_Tears_of_Joy.getImage().getScaledInstance(140, 140, 140));		
+		ImageIcon Face_With_Tongue = new ImageIcon("Emoji\\Face_With_Tongue.jpg");
+		Face_With_Tongue.setImage(Face_With_Tongue.getImage().getScaledInstance(140, 140, 140));		
+		ImageIcon Flushed_Face = new ImageIcon("Emoji\\Flushed_Face.jpg");
+		Face_With_Tongue.setImage(Face_With_Tongue.getImage().getScaledInstance(140, 140, 140));	 
+		ImageIcon Frowning_Face = new ImageIcon("Emoji\\Frowning_Face.jpg");
+		Frowning_Face.setImage(Frowning_Face.getImage().getScaledInstance(140, 140, 140));		
+		ImageIcon Grinning_Face_With_Smiling_Eyes = new ImageIcon("Emoji\\Grinning_Face_With_Smiling_Eyes.jpg");
+		Grinning_Face_With_Smiling_Eyes.setImage(Grinning_Face_With_Smiling_Eyes.getImage().getScaledInstance(140, 140, 140));		
+		ImageIcon Grinning_Face_With_Sweat = new ImageIcon("Emoji\\Grinning_Face_With_Sweat.jpg");
+		Grinning_Face_With_Sweat.setImage(Grinning_Face_With_Sweat.getImage().getScaledInstance(140, 140, 140));		
+		ImageIcon Grinning_Squinting_Face = new ImageIcon("Emoji\\Grinning_Squinting_Face.jpg");
+		Grinning_Squinting_Face.setImage(Grinning_Squinting_Face.getImage().getScaledInstance(140, 140, 140));		
+		ImageIcon Hugging_Face = new ImageIcon("Emoji\\Hugging_Face.jpg");
+		Hugging_Face.setImage(Hugging_Face.getImage().getScaledInstance(140, 140, 140));		
+		ImageIcon Kissing_Face_With_Closed_Eyes = new ImageIcon("Emoji\\Kissing_Face_With_Closed_Eyes.jpg");
+		Kissing_Face_With_Closed_Eyes.setImage(Kissing_Face_With_Closed_Eyes.getImage().getScaledInstance(140, 140, 140));		
+		ImageIcon Nauseated_Face = new ImageIcon("Emoji\\Nauseated_Face.jpg");
+		Nauseated_Face.setImage(Nauseated_Face.getImage().getScaledInstance(140, 140, 140));		
+		ImageIcon Persevering_Face = new ImageIcon("Emoji\\Persevering_Face.jpg");
+		Persevering_Face.setImage(Persevering_Face.getImage().getScaledInstance(140, 140, 140));		
+		ImageIcon Sleepy_Face = new ImageIcon("Emoji\\Sleepy_Face.jpg");
+		Sleepy_Face.setImage(Sleepy_Face.getImage().getScaledInstance(140, 140, 140));		
+		ImageIcon Slightly_Smiling_Face = new ImageIcon("Emoji\\Slightly_Smiling_Face.jpg");
+		Slightly_Smiling_Face.setImage(Slightly_Smiling_Face.getImage().getScaledInstance(140, 140, 140));		
+		ImageIcon Tired_Face = new ImageIcon("Emoji\\Tired_Face.jpg");
+		Tired_Face.setImage(Tired_Face.getImage().getScaledInstance(140, 140, 140));		
+		ImageIcon Upside_Down_Face = new ImageIcon("Emoji\\Upside_Down_Face.jpg");
+		Upside_Down_Face.setImage(Upside_Down_Face.getImage().getScaledInstance(140, 140, 140));		
+		ImageIcon Weary_Face = new ImageIcon("Emoji\\Weary_Face.jpg");
+		Weary_Face.setImage(Weary_Face.getImage().getScaledInstance(140, 140, 140));	
+		ImageIcon Winking_Face = new ImageIcon("Emoji\\Winking_Face.jpg");
+		Winking_Face.setImage(Winking_Face.getImage().getScaledInstance(140, 140, 140));	
+		ImageIcon Worried_Face = new ImageIcon("Emoji\\Worried_Face.jpg");
+		Worried_Face.setImage(Worried_Face.getImage().getScaledInstance(140, 140, 140));	
+		ImageIcon Zany_Face = new ImageIcon("Emoji\\Zany_Face.jpg");
+		Zany_Face.setImage(Zany_Face.getImage().getScaledInstance(140, 140, 140));	
+		ImageIcon Zipper_Mouth_Face = new ImageIcon("Emoji\\Zipper_Mouth_Face.jpg");
+		Zipper_Mouth_Face.setImage(Zipper_Mouth_Face.getImage().getScaledInstance(140, 140, 140));
+
+		JLabel lbl_Title = new JLabel("Fight");
+		lbl_Title.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lbl_Title.setHorizontalAlignment(SwingConstants.CENTER);
+		lbl_Title.setBounds(250, 10, 140, 56);
+		frame.getContentPane().add(lbl_Title);
+		
+		JLabel lblFight1 = new JLabel("");
+		lblFight1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblFight1.setBounds(46, 102, 140, 140);
+		frame.getContentPane().add(lblFight1);
+		
+		JLabel lblVs = new JLabel("");
+		lblVs.setHorizontalAlignment(SwingConstants.CENTER);
+		lblVs.setBounds(250, 102, 140, 140);
+		frame.getContentPane().add(lblVs);
+
+		JLabel lblFight2 = new JLabel("");
+		lblFight2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblFight2.setBounds(455, 102, 140, 140);
+		frame.getContentPane().add(lblFight2);
+		
+		JLabel lblCrownF1 = new JLabel("");
+		lblCrownF1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblCrownF1.setBounds(46, 56, 140, 36);
+		frame.getContentPane().add(lblCrownF1);
+			
+		JLabel lblCrownF2 = new JLabel("");
+		lblCrownF2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblCrownF2.setBounds(455, 56, 140, 36);
+		frame.getContentPane().add(lblCrownF2);
+		
+		JButton btnFight = new JButton("Ready?");
+		btnFight.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		btnFight.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnFight.setText("Fight!");
+				for(int counter = 0; counter < 200; counter ++) {
+					lblFight1.setIcon(fighter[octagon.match[counter].getF1()].getName());
+				}
+			}
+		});
+		btnFight.setBounds(250, 278, 140, 36);
+		frame.getContentPane().add(btnFight);
+		
+	}
+}

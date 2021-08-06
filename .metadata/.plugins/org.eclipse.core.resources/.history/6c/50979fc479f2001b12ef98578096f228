@@ -1,0 +1,13 @@
+package usingInterface;
+
+public class Manager {
+	public static void main(String[] args) {
+		
+		Person p1 = new Person("John", 39, false);
+		Person p2 = new Person("Anne", 40, true);
+		
+		Book b1 = new Book("The Ocean", "P. S. Will", 654, false, p1);
+		
+	}
+	
+}
