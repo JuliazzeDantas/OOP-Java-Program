@@ -1,6 +1,6 @@
 package inheritance;
 
-public class Person {
+public abstract class Person {
 	
 	private String name;
 	private int age;
@@ -12,7 +12,7 @@ public class Person {
 		this.gender = gender;
 	}
 
-	public void happyBirthday() {
+	public final void happyBirthday() {
 		age++;
 	}
 
