@@ -63,7 +63,7 @@ When the user logs in, he is taken to the main window. There, he can pay somethi
  
  * Deposit: When people want to put money in a bank account, they must click on this button.
 
- <p align="center"><div style="text-align:center"><img src="https://github.com/JuliazzeDantas/OOP-Java-Program/blob/master/SwingInterceBank/IMAGES/SwingBankProgram/Deposit.JPG" /></div><p align="center">
+ <p align="center"><div style="text-align:center"><img src="https://github.com/JuliazzeDantas/OOP-Java-Program/blob/master/IMAGES/SwingBankProgram/Deposit.JPG" /></div><p align="center">
 <p align="center">Depositing 100 dollars<p align="center">
  
  * Payment: The payment button takes you to another window. There, you can choose between credit and debit. You can effectuate the payment if you have enough money or credit. 
