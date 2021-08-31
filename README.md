@@ -135,3 +135,22 @@ The program has Getters and Setters, the method makeWeightClass() (it calculates
  
  <p align="center"><div style="text-align:center"><img src="https://github.com/JuliazzeDantas/OOP-Java-Program/blob/master/IMAGES/Compound_Objects/Window_Initial.JPG" /></div><p align="center">
 <p align="center">Program before to click on the button "Fight!".="center">
+ 
+ ## School (Project: Inheritance)
+ In this project, I exercised my concepts about inheritance, abstract classes, and final methods. I won't show you the details of the classes, because they are very simple.
+ 
+ ### Class - Person
+ Person is the abstract class. It can't be instantiated and has de final method happyBirthday().
+ 
+ ### Class - Visitor 
+ Visitor extends Person. This class doesn't have any particular method.
+ 
+ ### Classes - Student, Teacher & Functionary
+ These classes extend Person. Each other has particular methods and attributes.
+ 
+ ### Class - ScholarShipStudent
+ This class extends Student. It is a student that has a scholarship.
+ 
+ ### Class - Manager
+ It has the main method. It instantiates some classes and prints their toString() methods.
+ 
