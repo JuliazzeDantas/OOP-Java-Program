@@ -23,6 +23,11 @@ public class Student extends Person{
 		this.enrollment = null;
 	}
 	
+	@Override 
+	public String action() {
+		return "Student - To study!";
+	}
+	
 	@Override
 	public String toString() {
 		return super.toString() + " This student has the enrollment " + getEnrollment() + " and major " + getMajor() + ".";

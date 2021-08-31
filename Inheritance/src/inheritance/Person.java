@@ -20,6 +20,8 @@ public abstract class Person {
 		return name;
 	}
 
+	public abstract String action();
+	
 	public int getAge() {
 		return age;
 	}

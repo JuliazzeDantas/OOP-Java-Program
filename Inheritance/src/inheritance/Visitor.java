@@ -13,20 +13,10 @@ public class Visitor extends Person{
 		super.happyBirthday();
 	}*/
 	
-	@Override
-	public String getName() {
-		return super.getName();
+	@Override 
+	public String action() {
+		return "Visitor - To see!";
 	}
-	
-	@Override
-	public int getAge() {
-		return super.getAge();
-	}
-	
-	@Override
-	public boolean isGender() {
-		return super.isGender();
-	}	
 	
 	@Override
 	public String toString() {

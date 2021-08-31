@@ -8,6 +8,13 @@ public class Manager {
 		Teacher t1 = new Teacher("Silvy", 40, true, "Math", 3000);
 		Functionary f1 = new Functionary("Willian", 60, true, "T.I.");
 		
+		System.out.println(v1.action());
+		System.out.println(s1.action());
+		System.out.println(t1.action());
+		System.out.println(f1.action());
+		
+		System.out.println();
+		
 		System.out.println(v1.toString());
 		System.out.println(s1.toString());
 		System.out.println(t1.toString());

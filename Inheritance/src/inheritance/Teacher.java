@@ -27,6 +27,11 @@ public class Teacher extends Person{
 		setSalary(salary);
 	}
 	
+	@Override 
+	public String action() {
+		return "Teacher - To learn!";
+	}
+	
 	@Override
 	public String toString() {
 		return super.toString() + " This teacher has the degree " + getDegree() + " and salary " + getSalary() + ".";

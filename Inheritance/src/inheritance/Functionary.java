@@ -24,6 +24,11 @@ public class Functionary extends Person{
 	}
 	
 	@Override
+	public String action() {
+		return "Functionary - To work!";
+	}
+	
+	@Override
 	public String toString() {
 		return super.toString() + " This functionary is in the sector " + getSector() + ".";
 	}
