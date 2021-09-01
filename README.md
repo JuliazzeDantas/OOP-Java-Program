@@ -154,3 +154,18 @@ The program has Getters and Setters, the method makeWeightClass() (it calculates
  ### Class - Manager
  It has the main method. It instantiates some classes and prints their toString() methods.
  
+ ## Animals (Project: Polymorphism)
+ In the project below, I reinforced the concept of Polymorphism. I used the two types: Overriding and Overloading.
+ 
+ ### Class - Animal
+ It is an abstract class. It implements some basics methods like toMove(), toEat(), and others.
+ 
+ ### Classes - Mammal, Reptile, Fish
+ These classes extend Animal and represent a specific group of animals. They overwrite some methods and add new attributes.
+ 
+ ### Class - Wolf
+ It extends Animal and overwrites some methods.
+ 
+ ### Class - Dog
+ In the other classes, I used the overriding. In this, I'll practice the overloading too.
+ 
